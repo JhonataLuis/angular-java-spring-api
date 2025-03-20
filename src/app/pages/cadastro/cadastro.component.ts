@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { DefaultCadastroLayoutComponent } from '../../components/default-cadastro-layout/default-cadastro-layout.component';
 
 @Component({
   selector: 'app-cadastro',
   standalone: true,
-  imports: [],
+  imports: [
+    DefaultCadastroLayoutComponent
+  ],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.scss'
 })
