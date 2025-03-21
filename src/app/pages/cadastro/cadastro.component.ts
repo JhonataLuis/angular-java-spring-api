@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { DefaultCadastroLayoutComponent } from '../../components/default-cadastro-layout/default-cadastro-layout.component';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { PrimaryInputComponent } from '../../components/primary-input/primary-input.component';
 
 @Component({
   selector: 'app-cadastro',
   standalone: true,
   imports: [
     DefaultCadastroLayoutComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PrimaryInputComponent
   ],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.scss'
