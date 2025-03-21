@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-default-cadastro-layout',
@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './default-cadastro-layout.component.scss'
 })
 export class DefaultCadastroLayoutComponent {
-
+  @Input() title: string = "";
+  @Input() primaryBtnText: string = "";
+  @Input() secundaryBtnText: string = "";
 }
