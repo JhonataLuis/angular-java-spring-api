@@ -2,9 +2,17 @@
     title="Cadastro into your account"
     primaryBtnText="Login Now"
     secundaryBtnText="Singn Now"
+    (submit)="submit()"
+    (navigate)="navigate()"
 >
 <form [formGroup]="cadastroForm">
-    <app-primary-input></app-primary-input>
+    <app-primary-input formControlName="name" inputName="name" type="text" label="Seu Name" placeholder="Seu Nome">
+        <img src="/src/assets/svg/cadastro.svg"/>
+    </app-primary-input>
+    <app-primary-input formControlName="cep" inputName="cep" type="text" label="Seu Cep" placeholder="Seu Cep">
+        <img src="/src/assets/svg/cadastro.svg"/>
+    </app-primary-input>
+    <span>Forgot Password</span>
 </form>
 
 </app-default-cadastro-layout>

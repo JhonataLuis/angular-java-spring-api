@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { DefaultCadastroLayoutComponent } from '../../components/default-cadastro-layout/default-cadastro-layout.component';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { PrimaryInputComponent } from '../../components/primary-input/primary-input.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -17,10 +18,21 @@ import { PrimaryInputComponent } from '../../components/primary-input/primary-in
 export class CadastroComponent {
 cadastroForm!: FormGroup;
 
-  constructor(){
+  constructor( 
+    private router: Router
+  ){
+
     this.cadastroForm = new FormGroup({
       name: new FormControl('', [Validators.required]),
-      cep: new FormControl('', Validators.required)
+      cep: new FormControl('', [Validators.required, Validators.minLength(10)])
     })
+  }
+
+  submit(){
+    console.log(this.cadastroForm.value)
+  }
+
+  navigate(){
+    this.router.navigate(["cadastroUser"])
   }
 }
